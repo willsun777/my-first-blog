@@ -7,13 +7,12 @@
       <div>
         <h1><a href="/">TechCook</a></h1>
       </div>
-
-
       <div>
-        <p>日付</p>
-        <h2>タイトル</h2>
-        <p>内容</p>
+          {% for post in posts %}
+          <p>published:{{ post.published_date }}</p>
+          <h1><a href="">{{ post.title }}</a></h1>
+          <p>{{ post.text|linebreaksbr }}</p>
+          {% endfor %}
       </div>
-
     </body>
 </html>
